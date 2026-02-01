@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  spark-audio:
+    build: .
+    container_name: spark_audio_project
+    volumes:
+      # Monter votre dossier Dataset Windows dans le container
+      - C:/spark_project/Dataset:/app/data/input:rw
+      
+      # Monter le dossier de sortie
+      - C:/spark_project/Dataset_Sorted_by_class:/app/data/output:rw
+      
+      # Monter vos scripts Python
+      - C:/spark_project/scripts:/app/scripts:rw
+      
+      # Monter le dossier pour les résultats finaux
+      - C:/spark_project/output:/app/output:rw
+    
+    environment:
+      - SPARK_MASTER=local[*]
+      - PYSPARK_PYTHON=python3
+      - SPARK_LOCAL_IP=127.0.0.1
+    
+    # Garder le container actif
+    stdin_open: true
+    tty: true
+    
+    # Limites de ressources (ajustez selon votre PC)
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 8G
+        reservations:
+          cpus: '2'
+          memory: 4G
