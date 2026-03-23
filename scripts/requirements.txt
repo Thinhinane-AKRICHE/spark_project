@@ -1,0 +1,32 @@
+# =============================================
+# Projet Spark + Audio Classification
+# Python 3.9 recommandé (compatible PySpark 3.x)
+# =============================================
+
+# === Spark ===
+pyspark==3.5.1
+
+# === Audio ===
+librosa==0.10.2
+soundfile==0.12.1
+pydub==0.25.1
+
+# === Traitement numérique ===
+numpy==1.26.4
+scipy==1.13.0
+
+# === Machine Learning / Data ===
+pandas==2.2.2
+scikit-learn==1.4.2
+
+# === Visualisation ===
+matplotlib==3.8.4
+seaborn==0.13.2
+
+# === Jupyter / Notebook ===
+jupyter==1.0.0
+ipykernel==6.29.4
+ipywidgets==8.1.2
+
+# === Utilitaires ===
+tqdm==4.66.4
