@@ -1,2 +1,6 @@
 Dataset/
 env/
+audio_features_all.csv/
+audio_features_all.parquet/
+rf_model/
+Dataset_Sorted_by_class/
